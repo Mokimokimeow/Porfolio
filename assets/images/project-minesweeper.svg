@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="javaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140f1c"/>
+      <stop offset="100%" stop-color="#211530"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="500" fill="url(#javaGrad)"/>
+
+  <!-- Window Header -->
+  <rect x="0" y="0" width="800" height="42" fill="#1b1226" stroke="#2d1d42" stroke-width="1"/>
+  <circle cx="25" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="45" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="65" cy="21" r="5.5" fill="#10B981"/>
+  <text x="100" y="26" font-family="'JetBrains Mono', monospace" font-size="12" fill="#C4B5FD">Java Swing Application: MinesweeperGame.java [JDK 17]</text>
+
+  <!-- Left: Game Window GUI -->
+  <rect x="40" y="65" width="420" height="395" rx="8" fill="#150e20" stroke="#372252" stroke-width="2"/>
+  
+  <!-- Scoreboard Bar -->
+  <rect x="60" y="85" width="380" height="48" rx="6" fill="#0c0713" stroke="#2d1d42" stroke-width="1"/>
+  <!-- Mines Counter -->
+  <rect x="75" y="93" width="70" height="32" rx="4" fill="#1f0a0a"/>
+  <text x="110" y="115" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold" fill="#EF4444" text-anchor="middle">💣 010</text>
+  <!-- Face Status -->
+  <circle cx="250" cy="109" r="16" fill="#7C3AED" stroke="#C4B5FD" stroke-width="1.5"/>
+  <text x="250" y="115" font-size="16" text-anchor="middle">😎</text>
+  <!-- Timer -->
+  <rect x="355" y="93" width="70" height="32" rx="4" fill="#1f0a0a"/>
+  <text x="390" y="115" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold" fill="#EF4444" text-anchor="middle">⏱️ 042</text>
+
+  <!-- Minesweeper Grid 6x6 Matrix -->
+  <g transform="translate(60, 150)">
+    <!-- Row 0 -->
+    <rect x="0" y="0" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="30" y="30" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#38BDF8" text-anchor="middle">1</text>
+
+    <rect x="64" y="0" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="94" y="30" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#34D399" text-anchor="middle">2</text>
+
+    <rect x="128" y="0" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="158" y="30" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#EF4444" text-anchor="middle">3</text>
+
+    <rect x="192" y="0" width="60" height="45" rx="4" fill="#2d1a47" stroke="#4a2a75"/>
+    <text x="222" y="30" font-size="18" text-anchor="middle">🚩</text>
+
+    <rect x="256" y="0" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+    <rect x="320" y="0" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+
+    <!-- Row 1 -->
+    <rect x="0" y="49" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="30" y="79" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#38BDF8" text-anchor="middle">1</text>
+
+    <rect x="64" y="49" width="60" height="45" rx="4" fill="#1a0c28" stroke="#2c1445"/>
+    <rect x="128" y="49" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="158" y="79" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#34D399" text-anchor="middle">2</text>
+
+    <rect x="192" y="49" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+    <rect x="256" y="49" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+    <rect x="320" y="49" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+
+    <!-- Row 2 -->
+    <rect x="0" y="98" width="60" height="45" rx="4" fill="#1a0c28" stroke="#2c1445"/>
+    <rect x="64" y="98" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="94" y="128" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#38BDF8" text-anchor="middle">1</text>
+
+    <rect x="128" y="98" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="158" y="128" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#38BDF8" text-anchor="middle">1</text>
+
+    <rect x="192" y="98" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="222" y="128" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#38BDF8" text-anchor="middle">1</text>
+
+    <rect x="256" y="98" width="60" height="45" rx="4" fill="#2d1a47" stroke="#4a2a75"/>
+    <text x="286" y="128" font-size="18" text-anchor="middle">🚩</text>
+
+    <rect x="320" y="98" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+
+    <!-- Row 3 -->
+    <rect x="0" y="147" width="60" height="45" rx="4" fill="#1a0c28" stroke="#2c1445"/>
+    <rect x="64" y="147" width="60" height="45" rx="4" fill="#1a0c28" stroke="#2c1445"/>
+    <rect x="128" y="147" width="60" height="45" rx="4" fill="#1a0c28" stroke="#2c1445"/>
+    <rect x="192" y="147" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="222" y="177" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#34D399" text-anchor="middle">2</text>
+    <rect x="256" y="147" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+    <rect x="320" y="147" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+
+    <!-- Row 4 -->
+    <rect x="0" y="196" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="30" y="226" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#38BDF8" text-anchor="middle">1</text>
+    <rect x="64" y="196" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="94" y="226" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#38BDF8" text-anchor="middle">1</text>
+    <rect x="128" y="196" width="60" height="45" rx="4" fill="#1a0c28" stroke="#2c1445"/>
+    <rect x="192" y="196" width="60" height="45" rx="4" fill="#241538" stroke="#3d2260"/>
+    <text x="222" y="226" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#38BDF8" text-anchor="middle">1</text>
+    <rect x="256" y="196" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+    <rect x="320" y="196" width="60" height="45" rx="4" fill="#1f1131" stroke="#31194e"/>
+  </g>
+
+  <!-- Right: Architecture & Java Details -->
+  <rect x="490" y="65" width="275" height="395" rx="8" fill="#170f24" stroke="#372252" stroke-width="1"/>
+  <text x="510" y="100" font-family="'Outfit', sans-serif" font-weight="bold" font-size="18" fill="#FFFFFF">☕ Java Game Engine</text>
+  <text x="510" y="120" font-family="'Inter', sans-serif" font-size="11" fill="#C4B5FD">2nd Year BSIT Programming Coursework</text>
+
+  <rect x="510" y="145" width="235" height="65" rx="6" fill="#201533" stroke="#372252" stroke-width="1"/>
+  <text x="525" y="170" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00D9FF">GameMatrix.java</text>
+  <text x="525" y="190" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Recursive 0-cell flood fill algorithm</text>
+
+  <rect x="510" y="225" width="235" height="65" rx="6" fill="#201533" stroke="#372252" stroke-width="1"/>
+  <text x="525" y="250" font-family="'JetBrains Mono', monospace" font-size="11" fill="#7C3AED">MineGenerator.java</text>
+  <text x="525" y="270" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Randomized non-repeating mine distribution</text>
+
+  <rect x="510" y="305" width="235" height="65" rx="6" fill="#201533" stroke="#372252" stroke-width="1"/>
+  <text x="525" y="330" font-family="'JetBrains Mono', monospace" font-size="11" fill="#34D399">GUIListener.java</text>
+  <text x="525" y="350" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Mouse click &amp; right-click flag event binding</text>
+</svg>

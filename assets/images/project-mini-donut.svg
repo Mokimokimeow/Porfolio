@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0F14"/>
+      <stop offset="100%" stop-color="#161622"/>
+    </linearGradient>
+    <linearGradient id="purpleBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="cyanBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Top Window Header Bar -->
+  <rect x="0" y="0" width="800" height="42" fill="#141419" stroke="#27272A" stroke-width="1"/>
+  <!-- Mac Window Dots -->
+  <circle cx="25" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="45" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="65" cy="21" r="5.5" fill="#10B981"/>
+  <!-- URL/Tab Bar -->
+  <rect x="110" y="9" width="380" height="24" rx="5" fill="#0A0A0C" stroke="#27272A" stroke-width="1"/>
+  <text x="125" y="25" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A1A1AA">https://rk-minidonut-inventory.local/dashboard</text>
+
+  <!-- Sidebar -->
+  <rect x="0" y="42" width="180" height="458" fill="#111116" stroke="#27272A" stroke-width="1"/>
+  <text x="24" y="80" font-family="'Outfit', sans-serif" font-weight="bold" font-size="15" fill="#FFFFFF">🍩 R&amp;K's Mini Donut</text>
+  <text x="24" y="98" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7C3AED">INVENTORY SYSTEM</text>
+
+  <!-- Sidebar Nav items -->
+  <rect x="14" y="125" width="152" height="34" rx="6" fill="#7C3AED" fill-opacity="0.15" stroke="#7C3AED" stroke-width="1"/>
+  <text x="44" y="147" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">📊 Dashboard</text>
+
+  <text x="44" y="185" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">📦 Stock Levels</text>
+  <text x="44" y="220" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">💰 Daily Sales</text>
+  <text x="44" y="255" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">🚚 Supplier Logs</text>
+  <text x="44" y="290" font-family="'Inter', sans-serif" font-size="12" fill="#71717A">⚙️ System Settings</text>
+
+  <!-- Main Content Area -->
+  <text x="215" y="85" font-family="'Outfit', sans-serif" font-weight="bold" font-size="22" fill="#FFFFFF">Inventory Overview</text>
+  <text x="215" y="105" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">Senior High School Capstone Project • Production Tracker</text>
+
+  <!-- Metric Stat Cards -->
+  <!-- Card 1 -->
+  <rect x="215" y="125" width="170" height="85" rx="8" fill="#171720" stroke="#27272A" stroke-width="1"/>
+  <text x="230" y="150" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Total Batches Produced</text>
+  <text x="230" y="182" font-family="'Outfit', sans-serif" font-weight="bold" font-size="24" fill="#00D9FF">1,420 <tspan font-size="12" fill="#10B981" font-weight="normal">+12%</tspan></text>
+
+  <!-- Card 2 -->
+  <rect x="400" y="125" width="170" height="85" rx="8" fill="#171720" stroke="#27272A" stroke-width="1"/>
+  <text x="415" y="150" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Flavors in Stock</text>
+  <text x="415" y="182" font-family="'Outfit', sans-serif" font-weight="bold" font-size="24" fill="#7C3AED">8 Flavors</text>
+
+  <!-- Card 3 -->
+  <rect x="585" y="125" width="185" height="85" rx="8" fill="#171720" stroke="#27272A" stroke-width="1"/>
+  <text x="600" y="150" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Critical Stock Alert</text>
+  <text x="600" y="182" font-family="'Outfit', sans-serif" font-weight="bold" font-size="24" fill="#F59E0B">2 Items Low</text>
+
+  <!-- Inventory Table -->
+  <rect x="215" y="230" width="555" height="240" rx="8" fill="#15151C" stroke="#27272A" stroke-width="1"/>
+  <text x="235" y="260" font-family="'Outfit', sans-serif" font-weight="600" font-size="14" fill="#FFFFFF">Live Donut Flavor Inventory</text>
+
+  <!-- Table Header -->
+  <rect x="230" y="275" width="525" height="28" fill="#1D1D27" rx="4"/>
+  <text x="245" y="293" font-family="'JetBrains Mono', monospace" font-size="10" fill="#A1A1AA">FLAVOR ITEM</text>
+  <text x="390" y="293" font-family="'JetBrains Mono', monospace" font-size="10" fill="#A1A1AA">UNIT QTY</text>
+  <text x="490" y="293" font-family="'JetBrains Mono', monospace" font-size="10" fill="#A1A1AA">STATUS</text>
+  <text x="630" y="293" font-family="'JetBrains Mono', monospace" font-size="10" fill="#A1A1AA">REORDER LEVEL</text>
+
+  <!-- Row 1 -->
+  <text x="245" y="325" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF">Chocolate Glaze Mini</text>
+  <text x="390" y="325" font-family="'JetBrains Mono', monospace" font-size="12" fill="#00D9FF">340 pcs</text>
+  <rect x="490" y="312" width="75" height="18" rx="4" fill="#10B981" fill-opacity="0.2"/>
+  <text x="502" y="325" font-family="'JetBrains Mono', monospace" font-size="10" fill="#34D399">OPTIMAL</text>
+  <text x="630" y="325" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">100 pcs</text>
+
+  <!-- Row 2 -->
+  <text x="245" y="360" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF">Bavarian Cream Filled</text>
+  <text x="390" y="360" font-family="'JetBrains Mono', monospace" font-size="12" fill="#00D9FF">180 pcs</text>
+  <rect x="490" y="347" width="75" height="18" rx="4" fill="#10B981" fill-opacity="0.2"/>
+  <text x="502" y="360" font-family="'JetBrains Mono', monospace" font-size="10" fill="#34D399">OPTIMAL</text>
+  <text x="630" y="360" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">80 pcs</text>
+
+  <!-- Row 3 -->
+  <text x="245" y="395" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF">Strawberry Sprinkles</text>
+  <text x="390" y="395" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F59E0B">45 pcs</text>
+  <rect x="490" y="382" width="75" height="18" rx="4" fill="#F59E0B" fill-opacity="0.2"/>
+  <text x="507" y="395" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FBBF24">LOW</text>
+  <text x="630" y="395" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">60 pcs</text>
+
+  <!-- Row 4 -->
+  <text x="245" y="430" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF">Powdered Sugar Mini</text>
+  <text x="390" y="430" font-family="'JetBrains Mono', monospace" font-size="12" fill="#00D9FF">290 pcs</text>
+  <rect x="490" y="417" width="75" height="18" rx="4" fill="#10B981" fill-opacity="0.2"/>
+  <text x="502" y="430" font-family="'JetBrains Mono', monospace" font-size="10" fill="#34D399">OPTIMAL</text>
+  <text x="630" y="430" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">100 pcs</text>
+</svg>

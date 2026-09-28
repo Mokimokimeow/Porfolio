@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Portfolio</title>
+  <meta name="title" content="Portfolio">
+  <meta name="description" content="Personal portfolio of Andrew, a BSIT student passionate about web development, UI/UX design, Python, and Java programming.">
+  <meta name="keywords" content="BSIT student, web developer portfolio, student developer, frontend, Python, Java, inventory system, web development">
+  <meta name="author" content="Andrew">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portfolio">
+  <meta property="og:description" content="Explore my development journey, academic capstone, and programming projects.">
+  <meta property="og:image" content="assets/images/project-mini-donut.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Outfit, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+
+  <!-- Immediate Anti-Inspection Security Script -->
+  <script>
+    // Disable right-click & inspector shortcuts immediately
+    document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['I','i','J','j','C','c'].includes(e.key)) { e.preventDefault(); return false; }
+      if ((e.ctrlKey || e.metaKey) && ['u','U','s','S'].includes(e.key)) { e.preventDefault(); return false; }
+    });
+  </script>
+</head>
+<body class="bg-primary text-primary antialiased selection:bg-accent-purple selection:text-white" oncontextmenu="return false;">
+
+  <!-- Background Ambient Glow Accents -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-middle-right"></div>
+    <div class="ambient-glow glow-bottom-left"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- STICKY NAVIGATION -->
+  <header id="header" class="sticky-nav">
+    <div class="container nav-wrapper">
+      <!-- Logo / Name -->
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Portfolio</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-secondary btn-sm nav-cta">Get in Touch</a>
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <ul class="mobile-nav-links">
+          <li><a href="#home" class="mobile-nav-link">Home</a></li>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+          <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+          <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <a href="#contact" class="btn btn-primary w-full mobile-cta-btn">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- 4. HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <!-- Left Column: Introduction -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="badge-pill mb-4">
+            <span class="badge-dot"></span>
+            <span class="badge-text">3RD YEAR BSIT STUDENT • ASPIRING WEB &amp; MOBILE DEVELOPER</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight-purple">Andrew Llaneta</span>.<br>
+            Building My Way Into <span class="highlight-purple">Web Development.</span>
+          </h1>
+
+          <p class="hero-description text-secondary">
+            I'm a BSIT student passionate about building and exploring web applications, mobile applications, UI/UX design, and practical digital solutions. My journey started with my first web-based inventory management system in Senior High School and continues through college projects in web development, mobile apps, Python, and Java.
+          </p>
+
+          <!-- Call to actions -->
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Projects</span>
+              <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <span>About Me</span>
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials">
+            <span class="social-label text-secondary">Connect:</span>
+            <div class="social-links-group">
+              <a href="https://github.com/Mokimokimeow" class="social-icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub: Mokimokimeow" aria-label="GitHub Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </a>
+              <a href="https://www.facebook.com/Yakushi.Angrybirds/" class="social-icon-btn" target="_blank" rel="noopener noreferrer" title="Facebook: Andrew" aria-label="Facebook Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/dr.dr3www?stkn=MXFmbDd0a2VtYmZ3bA==" class="social-icon-btn" target="_blank" rel="noopener noreferrer" title="Instagram: @dr.dr3www" aria-label="Instagram Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Profile & Technology Constellation -->
+        <div class="hero-visual-wrapper reveal-on-scroll delay-100">
+          <div class="developer-card-frame">
+            <!-- Center Profile Image Area (Blank placeholder - Replace src with your photo) -->
+            <div class="profile-avatar-container" id="hero-profile-container">
+              <!-- EDIT HERE: Replace 'assets/images/avatar-blank.svg' with your actual image path (e.g. 'assets/images/profile.jpg') -->
+              <img src="assets/images/avatar-blank.svg" alt="Andrew Llaneta - Profile Photo Placeholder" class="profile-avatar-img" id="hero-profile-img" width="340" height="340">
+              <div class="profile-avatar-border"></div>
+            </div>
+
+            <!-- Orbiting / Floating Verified Technology Badges -->
+            <div class="floating-tech-badge badge-html" title="HTML">
+              <span class="tech-icon">&lt;/&gt;</span>
+              <span class="tech-name">HTML</span>
+            </div>
+            <div class="floating-tech-badge badge-css" title="CSS">
+              <span class="tech-icon">#</span>
+              <span class="tech-name">CSS</span>
+            </div>
+            <div class="floating-tech-badge badge-js" title="JavaScript">
+              <span class="tech-icon">JS</span>
+              <span class="tech-name">JavaScript</span>
+            </div>
+            <div class="floating-tech-badge badge-vue" title="Vue.js">
+              <span class="tech-icon">V</span>
+              <span class="tech-name">Vue.js</span>
+            </div>
+            <div class="floating-tech-badge badge-python" title="Python">
+              <span class="tech-icon">Py</span>
+              <span class="tech-name">Python</span>
+            </div>
+            <div class="floating-tech-badge badge-java" title="Java">
+              <span class="tech-icon">☕</span>
+              <span class="tech-name">Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ABOUT ME SECTION -->
+    <section id="about" class="section-padding bg-secondary-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-subtitle">BACKGROUND & OBJECTIVES</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Main Narrative -->
+          <div class="about-story-card card reveal-on-scroll">
+            <h3 class="about-lead-heading">Passionate about building functional software through continuous hands-on learning.</h3>
+            <p class="text-secondary mb-4">
+              I'm <strong>Andrew Llaneta</strong> (20 y/o), currently enrolled as a <strong>3rd Year Bachelor of Science in Information Technology (BSIT)</strong> student at the <strong>National College of Science and Technology (NCST)</strong> in Dasmariñas, Cavite. My interest in technology started with building practical systems and has expanded into actively building and exploring modern web applications and mobile applications.
+            </p>
+            <p class="text-secondary mb-4">
+              My development journey began in Senior High School with my first major capstone project, a web-based inventory management system for R&K's Mini Donut. As a 3rd-year college student, I continue expanding my skillset across web applications, mobile app solutions, Python, and Java.
+            </p>
+            <p class="text-secondary">
+              Each project helps me strengthen my understanding of frontend and backend workflows, responsive mobile interfaces, system architecture, and creating user-centered digital tools.
+            </p>
+          </div>
+
+          <!-- Structured Information Cards -->
+          <div class="about-cards-column">
+            <!-- Card 1: Education -->
+            <div class="info-card card reveal-on-scroll delay-100">
+              <div class="info-card-icon text-accent-purple">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="info-card-body">
+                <span class="info-tag">ACADEMIC PROFILE</span>
+                <h4 class="info-title">3rd Year BSIT Student</h4>
+                <p class="info-desc text-secondary">National College of Science and Technology (NCST) • Dasmariñas, Cavite</p>
+              </div>
+            </div>
+
+            <!-- Card 2: Focus -->
+            <div class="info-card card reveal-on-scroll delay-200">
+              <div class="info-card-icon text-accent-cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+              </div>
+              <div class="info-card-body">
+                <span class="info-tag">FOCUS</span>
+                <div class="focus-pills-wrap">
+                  <span class="pill-badge">Web Applications</span>
+                  <span class="pill-badge">Mobile Applications</span>
+                  <span class="pill-badge">System Development</span>
+                  <span class="pill-badge">UI/UX Design</span>
+                  <span class="pill-badge">Programming</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Current Goal -->
+            <div class="info-card card reveal-on-scroll delay-300">
+              <div class="info-card-icon text-accent-purple">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/></svg>
+              </div>
+              <div class="info-card-body">
+                <span class="info-tag">CURRENT GOAL</span>
+                <h4 class="info-title">Continuous Skill Development</h4>
+                <p class="info-desc text-secondary">Continue improving my development skills and build practical digital solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SKILLS SECTION -->
+    <section id="skills" class="section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-subtitle">PRACTICED CAPABILITIES</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-intro text-secondary">
+            Technologies and tools I have actively worked with across my academic coursework, system development, and programming projects.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-categories-wrapper">
+          
+          <!-- Category 1: Web Development -->
+          <div class="skill-group-block reveal-on-scroll">
+            <div class="skill-group-header">
+              <span class="group-indicator">01</span>
+              <h3 class="skill-group-title">Web Development</h3>
+            </div>
+            <div class="skills-cards-grid">
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">&lt;/&gt;</div>
+                  <h4 class="skill-title">HTML</h4>
+                </div>
+                <p class="skill-desc text-secondary">Building the structure and semantic foundation of web interfaces.</p>
+              </div>
+
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">#</div>
+                  <h4 class="skill-title">CSS</h4>
+                </div>
+                <p class="skill-desc text-secondary">Styling, responsive layouts, modern flexbox/grid architectures, and animations.</p>
+              </div>
+
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">JS</div>
+                  <h4 class="skill-title">JavaScript</h4>
+                </div>
+                <p class="skill-desc text-secondary">Creating interactive client-side logic, event handling, and DOM manipulation.</p>
+              </div>
+
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">PHP</div>
+                  <h4 class="skill-title">PHP</h4>
+                </div>
+                <p class="skill-desc text-secondary">Server-side scripting, form processing, and backend system logic for web systems.</p>
+              </div>
+
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">SQL</div>
+                  <h4 class="skill-title">MySQL</h4>
+                </div>
+                <p class="skill-desc text-secondary">Relational database design, table queries, and data management for inventory systems.</p>
+              </div>
+
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">⚛️</div>
+                  <h4 class="skill-title">React</h4>
+                </div>
+                <p class="skill-desc text-secondary">Component-based UI development and dynamic state management (e.g. BNDC Attendance Checker).</p>
+              </div>
+
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">V</div>
+                  <h4 class="skill-title">Vue.js</h4>
+                </div>
+                <p class="skill-desc text-secondary">Building reactive single-page components and structured frontend interfaces.</p>
+              </div>
+
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">B</div>
+                  <h4 class="skill-title">Bootstrap</h4>
+                </div>
+                <p class="skill-desc text-secondary">Rapid prototyping with responsive component grids and design utilities.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Programming -->
+          <div class="skill-group-block reveal-on-scroll">
+            <div class="skill-group-header">
+              <span class="group-indicator">02</span>
+              <h3 class="skill-group-title">Programming</h3>
+            </div>
+            <div class="skills-cards-grid grid-cols-2">
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">Py</div>
+                  <h4 class="skill-title">Python</h4>
+                </div>
+                <p class="skill-desc text-secondary">Developing algorithmic logic, console and interactive applications (e.g. Cooking Quests).</p>
+              </div>
+
+              <div class="skill-card card">
+                <div class="skill-card-top">
+                  <div class="skill-icon-box">☕</div>
+                  <h4 class="skill-title">Java</h4>
+                </div>
+                <p class="skill-desc text-secondary">Object-oriented programming, data structures, and game logic implementation (e.g. Minesweeper).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Design -->
+          <div class="skill-split-row">
+            <!-- Tools -->
+            <div class="skill-group-block reveal-on-scroll">
+              <div class="skill-group-header">
+                <span class="group-indicator">03</span>
+                <h3 class="skill-group-title">Tools</h3>
+              </div>
+              <div class="skills-cards-grid">
+                <div class="skill-card card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-box">Git</div>
+                    <h4 class="skill-title">Git</h4>
+                  </div>
+                  <p class="skill-desc text-secondary">Version control tracking and repository management.</p>
+                </div>
+
+                <div class="skill-card card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-box">GH</div>
+                    <h4 class="skill-title">GitHub</h4>
+                  </div>
+                  <p class="skill-desc text-secondary">Code hosting, collaboration, and project repository storage.</p>
+                </div>
+
+                <div class="skill-card card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-box">VS</div>
+                    <h4 class="skill-title">VS Code</h4>
+                  </div>
+                  <p class="skill-desc text-secondary">Primary code editor environment for development and debugging.</p>
+                </div>
+
+                <div class="skill-card card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-box">⚡</div>
+                    <h4 class="skill-title">Vite</h4>
+                  </div>
+                  <p class="skill-desc text-secondary">Fast frontend build tooling and hot-module replacement development server.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Design -->
+            <div class="skill-group-block reveal-on-scroll">
+              <div class="skill-group-header">
+                <span class="group-indicator">04</span>
+                <h3 class="skill-group-title">Design</h3>
+              </div>
+              <div class="skills-cards-grid">
+                <div class="skill-card card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-box">UI</div>
+                    <h4 class="skill-title">UI/UX Design</h4>
+                  </div>
+                  <p class="skill-desc text-secondary">Structuring user-friendly layouts and intuitive system navigation flows.</p>
+                </div>
+
+                <div class="skill-card card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-box">VD</div>
+                    <h4 class="skill-title">Visual Design</h4>
+                  </div>
+                  <p class="skill-desc text-secondary">Creating balanced typography, visual hierarchies, and branding assets.</p>
+                </div>
+
+                <div class="skill-card card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-box">RWD</div>
+                    <h4 class="skill-title">Responsive Web Design</h4>
+                  </div>
+                  <p class="skill-desc text-secondary">Ensuring seamless cross-device adaptability across mobile, tablet, and desktop.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 & 8. FEATURED PROJECTS SECTION WITH FILTER -->
+    <section id="projects" class="section-padding bg-secondary-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-subtitle">PORTFOLIO WORK</span>
+          <h2 class="section-title">My Projects</h2>
+          <p class="section-intro text-secondary">
+            Projects that represent my journey in learning development and turning ideas into working systems.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- 8. PROJECT FILTER CONTROLS -->
+        <div class="project-filter-container reveal-on-scroll" role="tablist" aria-label="Project Categories">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+            All Projects <span class="filter-count">(5)</span>
+          </button>
+          <button class="filter-tab" data-filter="web-development" role="tab" aria-selected="false">
+            Web Development <span class="filter-count">(2)</span>
+          </button>
+          <button class="filter-tab" data-filter="mobile" role="tab" aria-selected="false">
+            Mobile Development <span class="filter-count">(1)</span>
+          </button>
+          <button class="filter-tab" data-filter="programming" role="tab" aria-selected="false">
+            Programming <span class="filter-count">(2)</span>
+          </button>
+          <button class="filter-tab" data-filter="systems" role="tab" aria-selected="false">
+            Systems <span class="filter-count">(3)</span>
+          </button>
+          <button class="filter-tab" data-filter="academic" role="tab" aria-selected="false">
+            Academic Projects <span class="filter-count">(5)</span>
+          </button>
+        </div>
+
+        <!-- PROJECTS SHOWCASE GRID -->
+        <div class="projects-list-wrapper">
+          
+          <!-- PROJECT 01: FEATURED - R&K's Mini Donut -->
+          <article class="project-item project-featured card reveal-on-scroll" 
+                   data-category="web-development systems academic"
+                   id="project-01">
+            <div class="featured-project-layout">
+              <!-- Left: Project Mockup Preview -->
+              <div class="project-media-wrapper">
+                <!-- EDIT HERE: Replace with actual project screenshot if available -->
+                <img src="assets/images/project-mini-donut.svg" alt="R&K's Mini Donut Web-Based Inventory Management System Screenshot" class="project-img" loading="lazy">
+                <div class="project-media-badge">FIRST MAJOR SYSTEM PROJECT</div>
+              </div>
+
+              <!-- Right: Project Information -->
+              <div class="project-content-wrapper">
+                <div class="project-meta-badges">
+                  <span class="tag-badge tag-purple">Senior High School Capstone</span>
+                  <span class="tag-badge tag-cyan">Featured Origin</span>
+                </div>
+
+                <h3 class="project-headline">
+                  Developing a R&K's Mini Donut Web-Based Inventory Management System
+                </h3>
+
+                <p class="project-description text-secondary">
+                  My first major system project, developed as my Senior High School capstone. The project focused on creating a web-based inventory management system for R&K's Mini Donut.
+                </p>
+
+                <!-- Project Specifications -->
+                <div class="project-specs-table">
+                  <div class="spec-row">
+                    <span class="spec-label">Academic Level:</span>
+                    <span class="spec-value">Senior High School</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Project Type:</span>
+                    <span class="spec-value">Capstone Project</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Technology:</span>
+                    <span class="spec-value text-accent-cyan">PHP, HTML, CSS, JavaScript, MySQL</span>
+                  </div>
+                </div>
+
+                <!-- Action Links -->
+                <div class="project-actions">
+                  <a href="https://github.com/Mokimokimeow/Invent-Plan-Web-based" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Standard Project Grid for Projects 02, 03, 04 -->
+          <div class="projects-subgrid">
+            
+            <!-- PROJECT 02: Bulwagang NCST Web-Based System -->
+            <article class="project-item card reveal-on-scroll delay-100" 
+                     data-category="web-development systems academic"
+                     id="project-02">
+              <div class="project-card-image-wrap">
+                <!-- EDIT HERE: Replace with actual screenshot -->
+                <img src="assets/images/project-bulwagang.svg" alt="Bulwagang NCST Web-Based System Screenshot" class="project-card-img" loading="lazy">
+                <div class="project-badge-overlay">WEB TECHNOLOGY PROJECT</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-badges">
+                  <span class="tag-badge tag-purple">2nd Year BSIT</span>
+                  <span class="tag-badge tag-zinc">Web Technology</span>
+                </div>
+                <h3 class="project-card-title">
+                  Developing a Bulwagang NCST Web-Based System
+                </h3>
+                <p class="project-card-desc text-secondary">
+                  A web-based system developed as part of my Web Technology project during my second year of BSIT. The project allowed me to further develop my skills in web development, system design, and creating interfaces for an organizational context.
+                </p>
+                <div class="project-specs-mini">
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Academic Level:</span>
+                    <span class="spec-mini-val">2nd Year BSIT</span>
+                  </div>
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Course:</span>
+                    <span class="spec-mini-val">Web Technology</span>
+                  </div>
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Technology:</span>
+                    <span class="spec-mini-val text-accent-cyan">PHP, HTML, CSS, JavaScript</span>
+                  </div>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/gergerger221/Bulwagang-NCST" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 03: Cooking Quests (Python) -->
+            <article class="project-item card reveal-on-scroll delay-200" 
+                     data-category="programming academic"
+                     id="project-03">
+              <div class="project-card-image-wrap">
+                <!-- EDIT HERE: Replace with actual screenshot -->
+                <img src="assets/images/project-cooking-quests.svg" alt="Cooking Quests Python Project Screenshot" class="project-card-img" loading="lazy">
+                <div class="project-badge-overlay">PYTHON PROJECT</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-badges">
+                  <span class="tag-badge tag-cyan">Python</span>
+                  <span class="tag-badge tag-zinc">2nd Year BSIT</span>
+                </div>
+                <h3 class="project-card-title">
+                  Cooking Quests
+                </h3>
+                <p class="project-card-desc text-secondary">
+                  A Python-based project developed during my second year of BSIT. Cooking Quests allowed me to practice Python programming concepts while creating an interactive cooking-themed application.
+                </p>
+                <div class="project-specs-mini">
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Academic Level:</span>
+                    <span class="spec-mini-val">2nd Year BSIT</span>
+                  </div>
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Project Type:</span>
+                    <span class="spec-mini-val">Programming Project</span>
+                  </div>
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Technology:</span>
+                    <span class="spec-mini-val text-accent-cyan">Python</span>
+                  </div>
+                </div>
+                <div class="project-actions">
+                  <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 04: Java Minesweeper -->
+            <article class="project-item card reveal-on-scroll delay-300" 
+                     data-category="programming academic"
+                     id="project-04">
+              <div class="project-card-image-wrap">
+                <!-- EDIT HERE: Replace with actual screenshot -->
+                <img src="assets/images/project-minesweeper.svg" alt="Java Minesweeper Project Screenshot" class="project-card-img" loading="lazy">
+                <div class="project-badge-overlay">JAVA PROJECT</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-badges">
+                  <span class="tag-badge tag-purple">Java</span>
+                  <span class="tag-badge tag-zinc">2nd Year BSIT</span>
+                </div>
+                <h3 class="project-card-title">
+                  Java Minesweeper
+                </h3>
+                <p class="project-card-desc text-secondary">
+                  A Minesweeper game developed using Java as part of my programming coursework. The project allowed me to practice Java programming concepts while implementing the logic and interactions required for a playable game.
+                </p>
+                <div class="project-specs-mini">
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Academic Level:</span>
+                    <span class="spec-mini-val">2nd Year BSIT</span>
+                  </div>
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Project Type:</span>
+                    <span class="spec-mini-val">Programming Project</span>
+                  </div>
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Technology:</span>
+                    <span class="spec-mini-val text-accent-purple">Java</span>
+                  </div>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/Mokimokimeow/Java-Minesweeper" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 05: BNDC Attendance Checker -->
+            <article class="project-item card reveal-on-scroll delay-400" 
+                     data-category="mobile systems academic"
+                     id="project-05">
+              <div class="project-card-image-wrap">
+                <img src="assets/images/project-bndc-attendance.svg" alt="BNDC Attendance Checker Mobile App Screenshot" class="project-card-img" loading="lazy">
+                <div class="project-badge-overlay">MOBILE PROJECT</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-badges">
+                  <span class="tag-badge tag-cyan">React</span>
+                  <span class="tag-badge tag-purple">Vite</span>
+                  <span class="tag-badge tag-zinc">Mobile App</span>
+                </div>
+                <h3 class="project-card-title">
+                  BNDC Attendance Checker
+                </h3>
+                <p class="project-card-desc text-secondary">
+                  A mobile-based application built with React and Vite designed for efficient attendance checking, student verification, and class records management.
+                </p>
+                <div class="project-specs-mini">
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Platform:</span>
+                    <span class="spec-mini-val">Mobile App</span>
+                  </div>
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Project Type:</span>
+                    <span class="spec-mini-val">Attendance System</span>
+                  </div>
+                  <div class="spec-mini-item">
+                    <span class="spec-mini-label">Technology:</span>
+                    <span class="spec-mini-val text-accent-cyan">React, Vite</span>
+                  </div>
+                </div>
+                <div class="project-actions">
+                  <a href="https://drive.google.com/drive/u/2/folders/1J9XtNpnuoc0lpxzJd1DSz1j9H_FGz2DC" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="Open Google Drive Project Files">
+                    <span>View Project</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. "FROM WHERE I STARTED" SPECIAL SECTION -->
+    <section class="section-padding origin-spotlight-section">
+      <div class="container">
+        <div class="origin-spotlight-card card reveal-on-scroll">
+          <div class="origin-spotlight-grid">
+            <div class="origin-content">
+              <span class="origin-tag-pill">WHERE IT STARTED</span>
+              <h2 class="origin-statement">
+                "Every developer has a first project."
+              </h2>
+              <p class="origin-narrative text-secondary">
+                My development journey started in Senior High School with the <strong class="text-primary">R&K's Mini Donut Web-Based Inventory Management System</strong>.
+              </p>
+              <p class="origin-narrative text-secondary">
+                This project became the foundational starting point of my experience in developing systems — sparking my dedication to understanding software architecture, databases, interface responsiveness, and how technology solves tangible real-world operations.
+              </p>
+              
+              <div class="origin-milestone-box">
+                <div class="milestone-icon">🌱</div>
+                <div class="milestone-text">
+                  <span class="milestone-title">Senior High School Capstone Project</span>
+                  <span class="milestone-sub">The catalyst for pursuing a BS in Information Technology</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="origin-visual">
+              <div class="origin-frame">
+                <!-- EDIT HERE: Replace with actual origin capstone screenshot or photo -->
+                <img src="assets/images/project-mini-donut.svg" alt="R&K's Mini Donut Inventory Management System Origin" class="origin-preview-img" loading="lazy">
+                <div class="origin-glass-badge">
+                  <span class="origin-dot"></span>
+                  First System Milestone
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. DEVELOPMENT JOURNEY TIMELINE -->
+    <section id="journey" class="section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-subtitle">PROGRESSION ROADMAP</span>
+          <h2 class="section-title">My Development Journey</h2>
+          <p class="section-intro text-secondary">
+            From my first system project to exploring different areas of programming.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Timeline Track Line -->
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Stage 1: Senior High School -->
+          <div class="timeline-stage-marker reveal-on-scroll">
+            <span class="stage-tag">SENIOR HIGH SCHOOL</span>
+          </div>
+
+          <!-- Milestone 01: R&K's Mini Donut -->
+          <div class="timeline-node reveal-on-scroll" data-tech="PHP, MySQL, Web" data-level="Senior High School" data-type="Capstone Project">
+            <div class="timeline-dot">
+              <span class="timeline-dot-inner">01</span>
+            </div>
+            <div class="timeline-card card">
+              <div class="timeline-card-header">
+                <span class="node-number">01</span>
+                <span class="node-stage-badge">SHS Capstone</span>
+              </div>
+              <h3 class="timeline-card-title">R&K's Mini Donut Inventory Management System</h3>
+              <p class="timeline-card-summary text-secondary">
+                First major system project and Senior High School capstone.
+              </p>
+              
+              <!-- Hover Reveal Interactive Details -->
+              <div class="timeline-revealed-specs">
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Project Type:</span>
+                  <span class="rev-val">Capstone Project</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Technology:</span>
+                  <span class="rev-val text-accent-cyan">PHP, HTML, CSS, JS, MySQL</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">GitHub Repo:</span>
+                  <a href="https://github.com/Mokimokimeow/Invent-Plan-Web-based" target="_blank" rel="noopener noreferrer" class="rev-val text-accent-cyan hover-cyan">Repository ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Stage 2: 2nd Year BSIT -->
+          <div class="timeline-stage-marker reveal-on-scroll delay-100">
+            <span class="stage-tag stage-tag-purple">2ND YEAR BSIT</span>
+          </div>
+
+          <!-- Milestone 02: Bulwagang NCST -->
+          <div class="timeline-node reveal-on-scroll delay-100" data-tech="Web Technology" data-level="2nd Year BSIT" data-type="Course Project">
+            <div class="timeline-dot">
+              <span class="timeline-dot-inner">02</span>
+            </div>
+            <div class="timeline-card card">
+              <div class="timeline-card-header">
+                <span class="node-number">02</span>
+                <span class="node-stage-badge">Web Technology</span>
+              </div>
+              <h3 class="timeline-card-title">Bulwagang NCST Web-Based System</h3>
+              <p class="timeline-card-summary text-secondary">
+                Web Technology project focused on developing a web-based system.
+              </p>
+              <div class="timeline-revealed-specs">
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Project Type:</span>
+                  <span class="rev-val">Web Technology Project</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Technology:</span>
+                  <span class="rev-val text-accent-cyan">PHP, HTML, CSS, JS</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">GitHub Repo:</span>
+                  <a href="https://github.com/gergerger221/Bulwagang-NCST" target="_blank" rel="noopener noreferrer" class="rev-val text-accent-cyan hover-cyan">Repository ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 03: Cooking Quests (Python) -->
+          <div class="timeline-node reveal-on-scroll delay-200" data-tech="Python" data-level="2nd Year BSIT" data-type="Programming Project">
+            <div class="timeline-dot">
+              <span class="timeline-dot-inner">03</span>
+            </div>
+            <div class="timeline-card card">
+              <div class="timeline-card-header">
+                <span class="node-number">03</span>
+                <span class="node-stage-badge">Python Programming</span>
+              </div>
+              <h3 class="timeline-card-title">Cooking Quests</h3>
+              <p class="timeline-card-summary text-secondary">
+                Python programming project.
+              </p>
+              <div class="timeline-revealed-specs">
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Project Type:</span>
+                  <span class="rev-val">Programming Project</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Technology:</span>
+                  <span class="rev-val text-accent-cyan">Python</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Academic Level:</span>
+                  <span class="rev-val">2nd Year BSIT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 04: Java Minesweeper -->
+          <div class="timeline-node reveal-on-scroll delay-300" data-tech="Java" data-level="2nd Year BSIT" data-type="Programming Project">
+            <div class="timeline-dot">
+              <span class="timeline-dot-inner">04</span>
+            </div>
+            <div class="timeline-card card">
+              <div class="timeline-card-header">
+                <span class="node-number">04</span>
+                <span class="node-stage-badge">Java Game Logic</span>
+              </div>
+              <h3 class="timeline-card-title">Java Minesweeper</h3>
+              <p class="timeline-card-summary text-secondary">
+                Java programming project focused on implementing game logic.
+              </p>
+              <div class="timeline-revealed-specs">
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Project Type:</span>
+                  <span class="rev-val">Programming Project</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Technology:</span>
+                  <span class="rev-val text-accent-purple">Java</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">GitHub Repo:</span>
+                  <a href="https://github.com/Mokimokimeow/Java-Minesweeper" target="_blank" rel="noopener noreferrer" class="rev-val text-accent-cyan hover-cyan">Repository ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 05: BNDC Attendance Checker -->
+          <div class="timeline-node reveal-on-scroll delay-400" data-tech="React, Vite" data-level="BSIT" data-type="Mobile Attendance System">
+            <div class="timeline-dot">
+              <span class="timeline-dot-inner">05</span>
+            </div>
+            <div class="timeline-card card">
+              <div class="timeline-card-header">
+                <span class="node-number">05</span>
+                <span class="node-stage-badge">React &amp; Vite</span>
+              </div>
+              <h3 class="timeline-card-title">BNDC Attendance Checker</h3>
+              <p class="timeline-card-summary text-secondary">
+                Mobile-based attendance tracking and student check-in application built with React and Vite.
+              </p>
+              <div class="timeline-revealed-specs">
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Project Type:</span>
+                  <span class="rev-val">Mobile Attendance System</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Technology:</span>
+                  <span class="rev-val text-accent-cyan">React, Vite</span>
+                </div>
+                <div class="revealed-spec-item">
+                  <span class="rev-label">Project Link:</span>
+                  <a href="https://drive.google.com/drive/u/2/folders/1J9XtNpnuoc0lpxzJd1DSz1j9H_FGz2DC" target="_blank" rel="noopener noreferrer" class="rev-val text-accent-cyan hover-cyan">Google Drive ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. MY DEVELOPMENT PROCESS -->
+    <section class="section-padding bg-secondary-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-subtitle">METHODOLOGY</span>
+          <h2 class="section-title">My Development Process</h2>
+          <p class="section-intro text-secondary">
+            A structured workflow I follow when approaching software challenges and interface design.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="process-grid">
+          <!-- Step 01 -->
+          <div class="process-card card reveal-on-scroll">
+            <div class="process-num">01</div>
+            <h3 class="process-name">UNDERSTAND</h3>
+            <p class="process-text text-secondary">Understand the problem and requirements.</p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="process-card card reveal-on-scroll delay-100">
+            <div class="process-num">02</div>
+            <h3 class="process-name">PLAN</h3>
+            <p class="process-text text-secondary">Plan the features, workflow, and structure.</p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="process-card card reveal-on-scroll delay-200">
+            <div class="process-num">03</div>
+            <h3 class="process-name">DESIGN</h3>
+            <p class="process-text text-secondary">Create the interface and user experience.</p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="process-card card reveal-on-scroll delay-300">
+            <div class="process-num">04</div>
+            <h3 class="process-name">DEVELOP</h3>
+            <p class="process-text text-secondary">Build the actual system or application.</p>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="process-card card reveal-on-scroll delay-400">
+            <div class="process-num">05</div>
+            <h3 class="process-name">TEST</h3>
+            <p class="process-text text-secondary">Check functionality and responsiveness.</p>
+          </div>
+
+          <!-- Step 06 -->
+          <div class="process-card card reveal-on-scroll delay-500">
+            <div class="process-num">06</div>
+            <h3 class="process-name">IMPROVE</h3>
+            <p class="process-text text-secondary">Refine the project based on testing and feedback.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- 13. EDUCATION SECTION -->
+    <section class="section-padding bg-secondary-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-subtitle">ACADEMIC PATHWAY</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="education-card-container reveal-on-scroll">
+          <div class="education-card card">
+            <div class="education-badge-strip">
+              <span class="edu-status-badge">3RD YEAR • CURRENTLY ENROLLED</span>
+            </div>
+            
+            <div class="education-card-main">
+              <div class="edu-icon-circle">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="edu-details">
+                <h3 class="edu-degree">Bachelor of Science in Information Technology</h3>
+                <p class="edu-status-text text-secondary">
+                  Institution: <span class="text-primary font-medium">National College of Science and Technology (NCST) — Dasmariñas, Cavite</span>
+                </p>
+                <p class="edu-status-text text-secondary">
+                  Year Level: <span class="text-accent-cyan font-medium">3rd Year BSIT Student</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. CONTACT SECTION -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-subtitle">GET IN TOUCH</span>
+          <h2 class="section-title">Let's Build Something.</h2>
+          <p class="section-intro text-secondary">
+            Have a project, idea, or opportunity? Feel free to connect with me.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details & Socials -->
+          <div class="contact-info-card card reveal-on-scroll">
+            <h3 class="contact-card-heading">Contact Information</h3>
+            <p class="text-secondary mb-6">
+              I am always eager to discuss web technologies, system ideas, or potential collaborations.
+            </p>
+
+            <div class="contact-methods-list">
+              
+              <!-- Email Item with Copy Feature -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="method-label">Email</span>
+                  <a href="mailto:drewllaneta05@gmail.com" class="method-value hover-cyan" id="display-email">drewllaneta05@gmail.com</a>
+                </div>
+                <button type="button" class="copy-btn" id="copy-email-btn" title="Copy Email" aria-label="Copy email address">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                </button>
+              </div>
+
+              <!-- GitHub Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="method-label">GitHub</span>
+                  <a href="https://github.com/Mokimokimeow" class="method-value hover-cyan" target="_blank" rel="noopener noreferrer">github.com/Mokimokimeow</a>
+                </div>
+              </div>
+
+              <!-- Facebook Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="method-label">Facebook</span>
+                  <a href="https://www.facebook.com/Yakushi.Angrybirds/" class="method-value hover-cyan" target="_blank" rel="noopener noreferrer">facebook.com/Yakushi.Angrybirds</a>
+                </div>
+              </div>
+
+              <!-- Instagram Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="method-label">Instagram</span>
+                  <a href="https://www.instagram.com/dr.dr3www?stkn=MXFmbDd0a2VtYmZ3bA==" class="method-value hover-cyan" target="_blank" rel="noopener noreferrer">@dr.dr3www</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="contact-form-card card reveal-on-scroll delay-100">
+            <form id="portfolio-contact-form" class="contact-form" action="https://formsubmit.co/drewllaneta05@gmail.com" method="POST" novalidate>
+              <!-- FormSubmit Configuration -->
+              <input type="hidden" name="_subject" value="New Message from Portfolio Website">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name <span class="required-star">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Rivera" required autocomplete="name">
+                <span class="form-error" id="name-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email">
+                <span class="form-error" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span class="required-star">*</span></label>
+                <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="Share your message, inquiry, or project idea..." required></textarea>
+                <span class="form-error" id="message-error">Please write a message (at least 10 characters).</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full" id="submit-btn">
+                <span>Send Message</span>
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              
+              <p class="form-note text-secondary text-xs text-center mt-3">
+                Live Form: Messages are delivered directly to <strong class="text-accent-cyan">drewllaneta05@gmail.com</strong>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 15. FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <span class="logo-symbol">&lt;/&gt;</span>
+            <span class="logo-text">Portfolio</span>
+          </a>
+          <p class="footer-tagline text-secondary">
+            BSIT Student • Aspiring Web Developer
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="https://github.com/Mokimokimeow" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Yakushi.Angrybirds/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/dr.dr3www?stkn=MXFmbDd0a2VtYmZ3bA==" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text text-secondary">
+          &copy; 2026 Andrew. All rights reserved. Built with modern web standards.
+        </p>
+        <a href="#home" class="back-to-top" aria-label="Scroll back to top">
+          <span>Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>

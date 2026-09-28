@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1017"/>
+      <stop offset="100%" stop-color="#141824"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Top Window Header -->
+  <rect x="0" y="0" width="800" height="42" fill="#141722" stroke="#27272A" stroke-width="1"/>
+  <circle cx="25" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="45" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="65" cy="21" r="5.5" fill="#10B981"/>
+  <rect x="110" y="9" width="380" height="24" rx="5" fill="#0A0C12" stroke="#27272A" stroke-width="1"/>
+  <text x="125" y="25" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A1A1AA">https://bulwagang-ncst-system.local/portal</text>
+
+  <!-- Navbar -->
+  <rect x="30" y="65" width="740" height="50" rx="8" fill="#171C2B" stroke="#27272A" stroke-width="1"/>
+  <text x="50" y="96" font-family="'Outfit', sans-serif" font-weight="bold" font-size="16" fill="#FFFFFF">🏛️ Bulwagang NCST System</text>
+  <text x="460" y="95" font-family="'Inter', sans-serif" font-size="12" fill="#00D9FF">Event Bookings</text>
+  <text x="565" y="95" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">Facility Schedule</text>
+  <text x="680" y="95" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">Admin</text>
+
+  <!-- Main Hero Card / Booking Visual -->
+  <rect x="30" y="130" width="480" height="330" rx="8" fill="#151A27" stroke="#27272A" stroke-width="1"/>
+  <text x="50" y="165" font-family="'Outfit', sans-serif" font-weight="bold" font-size="18" fill="#FFFFFF">Facility Schedule &amp; Hall Reservations</text>
+  <text x="50" y="185" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">2nd Year BSIT • Web Technology Academic System</text>
+
+  <!-- Calendar / Hall Slots -->
+  <rect x="50" y="210" width="440" height="60" rx="6" fill="#1B2233" stroke="#27272A" stroke-width="1"/>
+  <text x="65" y="235" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Main Hall A - General Assembly</text>
+  <text x="65" y="255" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A1A1AA">Time: 09:00 AM - 12:00 PM | Status: Confirmed</text>
+  <rect x="390" y="225" width="85" height="24" rx="4" fill="#10B981" fill-opacity="0.2"/>
+  <text x="402" y="241" font-family="'JetBrains Mono', monospace" font-size="11" fill="#34D399">RESERVED</text>
+
+  <rect x="50" y="285" width="440" height="60" rx="6" fill="#1B2233" stroke="#27272A" stroke-width="1"/>
+  <text x="65" y="310" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Conference Room B - Department Meeting</text>
+  <text x="65" y="330" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A1A1AA">Time: 01:30 PM - 03:30 PM | Status: Pending</text>
+  <rect x="390" y="300" width="85" height="24" rx="4" fill="#F59E0B" fill-opacity="0.2"/>
+  <text x="407" y="316" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FBBF24">PENDING</text>
+
+  <rect x="50" y="360" width="440" height="60" rx="6" fill="#1B2233" stroke="#27272A" stroke-width="1"/>
+  <text x="65" y="385" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Audio-Visual Stage - Rehearsal</text>
+  <text x="65" y="405" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A1A1AA">Time: 04:00 PM - 06:00 PM | Status: Available</text>
+  <rect x="390" y="375" width="85" height="24" rx="4" fill="#7C3AED" fill-opacity="0.2"/>
+  <text x="409" y="391" font-family="'JetBrains Mono', monospace" font-size="11" fill="#C4B5FD">OPEN</text>
+
+  <!-- Right Sidebar Status -->
+  <rect x="530" y="130" width="240" height="330" rx="8" fill="#151A27" stroke="#27272A" stroke-width="1"/>
+  <text x="550" y="165" font-family="'Outfit', sans-serif" font-weight="bold" font-size="16" fill="#FFFFFF">System Metrics</text>
+
+  <rect x="550" y="190" width="200" height="70" rx="6" fill="#1C2336" stroke="#27272A" stroke-width="1"/>
+  <text x="565" y="215" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Total Bookings Today</text>
+  <text x="565" y="245" font-family="'Outfit', sans-serif" font-size="22" font-weight="bold" fill="#00D9FF">6 Events</text>
+
+  <rect x="550" y="275" width="200" height="70" rx="6" fill="#1C2336" stroke="#27272A" stroke-width="1"/>
+  <text x="565" y="300" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Available Venues</text>
+  <text x="565" y="330" font-family="'Outfit', sans-serif" font-size="22" font-weight="bold" fill="#7C3AED">3 Halls</text>
+
+  <rect x="550" y="360" width="200" height="70" rx="6" fill="#1C2336" stroke="#27272A" stroke-width="1"/>
+  <text x="565" y="385" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Web Tech Module</text>
+  <text x="565" y="415" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" fill="#10B981">ONLINE</text>
+</svg>

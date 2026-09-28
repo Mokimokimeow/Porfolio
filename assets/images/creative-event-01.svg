@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="eventGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b1226"/>
+      <stop offset="100%" stop-color="#0a1420"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#eventGrad)"/>
+
+  <!-- Event Banner Graphic -->
+  <rect x="60" y="60" width="480" height="280" rx="14" fill="#131420" stroke="#27272A" stroke-width="1.5"/>
+  
+  <rect x="90" y="90" width="100" height="24" rx="12" fill="#00D9FF" fill-opacity="0.2" stroke="#00D9FF"/>
+  <text x="140" y="106" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#00D9FF" text-anchor="middle">TECH SUMMIT</text>
+
+  <text x="90" y="160" font-family="'Outfit', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF">ANNUAL HACKATHON</text>
+  <text x="90" y="195" font-family="'Inter', sans-serif" font-size="14" fill="#A1A1AA">Keynote Sessions • Coding Challenge • UI Showcase</text>
+
+  <!-- Banner details -->
+  <rect x="90" y="240" width="160" height="40" rx="6" fill="#7C3AED"/>
+  <text x="170" y="265" font-family="'Outfit', sans-serif" font-weight="bold" font-size="13" fill="#FFFFFF" text-anchor="middle">REGISTER NOW</text>
+
+  <text x="300" y="390" font-family="'Outfit', sans-serif" font-weight="700" font-size="18" fill="#FFFFFF" text-anchor="middle">Event Graphics &amp; Social Banners</text>
+  <text x="300" y="415" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A1A1AA" text-anchor="middle">Promotional Media &amp; Announcement Assets</text>
+</svg>

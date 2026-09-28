@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blankGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181822"/>
+      <stop offset="50%" stop-color="#121218"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="ringAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#00D9FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="400" height="400" fill="url(#blankGrad)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <path d="M50 0v400 M100 0v400 M150 0v400 M200 0v400 M250 0v400 M300 0v400 M350 0v400" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+  <path d="M0 50h400 M0 100h400 M0 150h400 M0 200h400 M0 250h400 M0 300h400 M0 350h400" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+
+  <!-- Outer Dashed Tech Ring -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="url(#ringAccent)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.4"/>
+
+  <!-- Minimal User Silhouette Outline -->
+  <g fill="none" stroke="#3F3F46" stroke-width="2.5" opacity="0.6">
+    <!-- Body / Shoulders -->
+    <path d="M110 350 C 130 260, 270 260, 290 350" fill="rgba(39, 39, 42, 0.2)" stroke="#52525B"/>
+    <!-- Head Circle -->
+    <circle cx="200" cy="180" r="55" fill="rgba(39, 39, 42, 0.3)" stroke="#52525B"/>
+  </g>
+
+  <!-- Plus / Add Photo Indicator -->
+  <circle cx="200" cy="180" r="24" fill="#181824" stroke="#7C3AED" stroke-width="1.5"/>
+  <path d="M200 170v20 M190 180h20" stroke="#00D9FF" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Bottom Label -->
+  <rect x="130" y="320" width="140" height="24" rx="12" fill="#0A0A0A" stroke="#27272A" stroke-width="1"/>
+  <text x="200" y="336" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#A1A1AA" text-anchor="middle">ADD PHOTO HERE</text>
+</svg>

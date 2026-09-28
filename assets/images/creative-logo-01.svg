@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14111f"/>
+      <stop offset="100%" stop-color="#0c0a14"/>
+    </linearGradient>
+    <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#00D9FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#logoGrad)"/>
+
+  <!-- Logo Mark Graphic -->
+  <g transform="translate(300, 180)">
+    <circle cx="0" cy="0" r="85" fill="#1C182B" stroke="#2E2645" stroke-width="2"/>
+    <path d="M-40,-35 L0,45 L40,-35 Z" fill="none" stroke="url(#markGrad)" stroke-width="6" stroke-linejoin="round"/>
+    <circle cx="0" cy="-10" r="14" fill="#00D9FF"/>
+  </g>
+
+  <text x="300" y="320" font-family="'Outfit', sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">IDENTITY LOGO</text>
+  <text x="300" y="348" font-family="'JetBrains Mono', monospace" font-size="12" fill="#A1A1AA" text-anchor="middle">Brand Mark &amp; Vector Iconography</text>
+  <text x="300" y="380" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7C3AED" text-anchor="middle">[Creative Works Placeholder]</text>
+</svg>

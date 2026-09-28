@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bndcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c121e"/>
+      <stop offset="100%" stop-color="#141c2c"/>
+    </linearGradient>
+    <linearGradient id="scannerGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="500" fill="url(#bndcBg)"/>
+
+  <!-- Left: Mobile Device Frame (3D Perspective / Centered UI) -->
+  <g transform="translate(60, 35)">
+    <!-- Phone Outer Case -->
+    <rect x="0" y="0" width="220" height="430" rx="28" fill="#0A0D14" stroke="#253044" stroke-width="3"/>
+    
+    <!-- Phone Screen Area -->
+    <rect x="10" y="12" width="200" height="406" rx="20" fill="#0f1726"/>
+    
+    <!-- Dynamic Island / Top Notch -->
+    <rect x="70" y="18" width="60" height="10" rx="5" fill="#000000"/>
+    <circle cx="115" cy="23" r="2.5" fill="#1e293b"/>
+
+    <!-- App Header -->
+    <rect x="18" y="38" width="184" height="42" rx="8" fill="#182338"/>
+    <text x="30" y="58" font-family="'Outfit', sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">📱 BNDC Checker</text>
+    <text x="30" y="72" font-family="'JetBrains Mono', monospace" font-size="8" fill="#00D9FF">ATTENDANCE SYSTEM</text>
+
+    <!-- QR / Scanner Viewfinder HUD -->
+    <rect x="28" y="92" width="164" height="150" rx="12" fill="#131c2d" stroke="#273852" stroke-width="1"/>
+    
+    <!-- Scanner Target Corners -->
+    <path d="M42 110 h 20 M42 110 v 20" stroke="#00D9FF" stroke-width="2.5" fill="none"/>
+    <path d="M178 110 h -20 M178 110 v 20" stroke="#00D9FF" stroke-width="2.5" fill="none"/>
+    <path d="M42 222 h 20 M42 222 v -20" stroke="#00D9FF" stroke-width="2.5" fill="none"/>
+    <path d="M178 222 h -20 M178 222 v -20" stroke="#00D9FF" stroke-width="2.5" fill="none"/>
+    
+    <!-- Laser Scan Line -->
+    <line x1="42" y1="166" x2="178" y2="166" stroke="#00D9FF" stroke-width="2" stroke-dasharray="4 2"/>
+    <rect x="42" y="146" width="136" height="40" fill="url(#scannerGlow)" opacity="0.3"/>
+    
+    <text x="110" y="170" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#38BDF8" text-anchor="middle">READY TO SCAN</text>
+
+    <!-- Recent Scanned Student Card -->
+    <rect x="20" y="254" width="180" height="75" rx="8" fill="#18243a" stroke="#2c3e5e" stroke-width="1"/>
+    <circle cx="42" cy="285" r="14" fill="#7C3AED" fill-opacity="0.3" stroke="#7C3AED"/>
+    <text x="42" y="289" font-size="12" text-anchor="middle">🎓</text>
+    
+    <text x="64" y="278" font-family="'Inter', sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF">Student Verified</text>
+    <text x="64" y="293" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00D9FF">ID: 2024-BSIT-0842</text>
+    <text x="64" y="308" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10B981">✓ TIME IN: 07:45 AM</text>
+
+    <!-- Bottom Check-in Log mini -->
+    <rect x="20" y="338" width="180" height="38" rx="6" fill="#131c2d"/>
+    <text x="30" y="360" font-family="'Inter', sans-serif" font-size="9" fill="#A1A1AA">Total Checked In: <tspan fill="#34D399" font-weight="bold">48 / 50</tspan></text>
+
+    <!-- Bottom Action Button -->
+    <rect x="20" y="384" width="180" height="24" rx="6" fill="#7C3AED"/>
+    <text x="110" y="400" font-family="'Outfit', sans-serif" font-weight="bold" font-size="10" fill="#FFFFFF" text-anchor="middle">MANUAL ENTRY</text>
+  </g>
+
+  <!-- Right: Project Highlights & Architecture -->
+  <g transform="translate(320, 60)">
+    <rect x="0" y="0" width="440" height="380" rx="12" fill="#101726" stroke="#223048" stroke-width="1.5"/>
+    
+    <text x="30" y="45" font-family="'Outfit', sans-serif" font-weight="bold" font-size="22" fill="#FFFFFF">BNDC Attendance Checker</text>
+    <text x="30" y="70" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">Mobile-Based Student Attendance &amp; Tracking System</text>
+
+    <!-- Stat Badges -->
+    <rect x="30" y="95" width="180" height="75" rx="8" fill="#162238" stroke="#253550" stroke-width="1"/>
+    <text x="45" y="122" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Platform Type</text>
+    <text x="45" y="150" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#00D9FF">Mobile App</text>
+
+    <rect x="230" y="95" width="180" height="75" rx="8" fill="#162238" stroke="#253550" stroke-width="1"/>
+    <text x="245" y="122" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">System Target</text>
+    <text x="245" y="150" font-family="'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#7C3AED">BNDC Class</text>
+
+    <!-- Key Feature Rows -->
+    <rect x="30" y="190" width="380" height="50" rx="6" fill="#151e30" stroke="#223048" stroke-width="1"/>
+    <text x="50" y="220" font-family="'Inter', sans-serif" font-size="13" fill="#E4E4E7">⚡ Fast student attendance logging &amp; verification</text>
+
+    <rect x="30" y="250" width="380" height="50" rx="6" fill="#151e30" stroke="#223048" stroke-width="1"/>
+    <text x="50" y="280" font-family="'Inter', sans-serif" font-size="13" fill="#E4E4E7">📂 Google Drive distribution &amp; project artifact access</text>
+
+    <!-- Drive Link Button Preview -->
+    <rect x="30" y="315" width="380" height="42" rx="6" fill="#7C3AED" fill-opacity="0.2" stroke="#7C3AED" stroke-width="1"/>
+    <text x="220" y="341" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" fill="#00D9FF" text-anchor="middle">🔗 Google Drive Project Files Attached</text>
+  </g>
+</svg>
