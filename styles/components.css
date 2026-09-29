@@ -1272,24 +1272,29 @@
 /* --------------------------------------------------------------------------
    10. EDUCATION SECTION
    -------------------------------------------------------------------------- */
-.education-card-container {
-  max-width: 800px;
+.education-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
 .education-card {
-  padding: 2.5rem;
+  padding: 2.25rem 2rem;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .education-badge-strip {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.35rem;
 }
 
 .edu-status-badge {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   padding: 0.3rem 0.8rem;
@@ -1297,40 +1302,47 @@
   border: 1px solid rgba(0, 217, 255, 0.3);
   color: var(--accent-cyan);
   border-radius: var(--radius-full);
+  display: inline-block;
+}
+
+.edu-status-completed {
+  background: var(--accent-purple-subtle);
+  border-color: rgba(124, 58, 237, 0.4);
+  color: #c4b5fd;
 }
 
 .education-card-main {
   display: flex;
-  align-items: center;
-  gap: 1.75rem;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
 .edu-icon-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--accent-purple-subtle);
-  border: 1px solid rgba(124, 58, 237, 0.3);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-purple);
   flex-shrink: 0;
 }
 
+.edu-details {
+  flex-grow: 1;
+}
+
 .edu-degree {
-  font-size: 1.45rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.35;
 }
 
 .edu-status-text {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.edu-edit-placeholder {
-  font-family: var(--font-mono);
-  opacity: 0.6;
+  font-size: 0.925rem;
+  line-height: 1.55;
+  margin-bottom: 0.35rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -1910,6 +1922,15 @@
     gap: 1.5rem;
   }
 
+  .education-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .education-card {
+    padding: 1.75rem 1.4rem;
+  }
+
   .contact-info-card, .contact-form-card {
     padding: 1.75rem 1.35rem;
   }
@@ -2050,13 +2071,19 @@
     font-size: 1.1rem;
   }
 
-  .contact-info-card, .contact-form-card {
-    padding: 1.4rem 1.1rem;
+  .education-card {
+    padding: 1.4rem 1.15rem;
   }
 
   .education-card-main {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .edu-degree {
+    font-size: 1.15rem;
   }
 }
 
