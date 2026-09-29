@@ -246,6 +246,13 @@ img, svg {
   padding-right: 1.5rem;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+}
+
 .section-padding {
   padding-top: var(--section-space);
   padding-bottom: var(--section-space);
