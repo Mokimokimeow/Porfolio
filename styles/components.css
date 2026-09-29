@@ -132,6 +132,10 @@
   top: 4.5rem;
   left: 0;
   width: 100%;
+  max-height: calc(100vh - 4.5rem);
+  max-height: calc(100dvh - 4.5rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background: rgba(15, 15, 15, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -1963,22 +1967,26 @@
   .hero-buttons {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.65rem;
     width: 100%;
-    max-width: 340px;
+    max-width: 360px;
     margin: 0 auto 1.75rem auto;
-  }
-
-  .hero-buttons .btn {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 0.75rem 0.6rem;
-    font-size: 0.85rem;
     justify-content: center;
   }
 
+  .hero-buttons .btn {
+    flex: 1 1 135px;
+    min-width: 125px;
+    max-width: 100%;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.88rem;
+    justify-content: center;
+    text-align: center;
+  }
+
   .hero-buttons .btn span {
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .developer-card-frame {
