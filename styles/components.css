@@ -1589,12 +1589,15 @@
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
   transition: opacity var(--transition-normal), visibility var(--transition-normal);
 }
 
 .lightbox-modal.open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .lightbox-backdrop {
@@ -2003,6 +2006,40 @@
   .filter-tab {
     padding: 0.45rem 0.85rem;
     font-size: 0.78rem;
+  }
+
+  .timeline-line {
+    left: 18px;
+  }
+
+  .timeline-stage-marker {
+    padding-left: 48px;
+    margin: 1.75rem 0 1rem 0;
+  }
+
+  .timeline-node {
+    padding-left: 48px;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-dot {
+    left: 4px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .timeline-dot svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .timeline-card-title {
+    font-size: 1.1rem;
   }
 
   .contact-info-card, .contact-form-card {
