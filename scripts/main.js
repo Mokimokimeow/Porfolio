@@ -338,6 +338,17 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       }
 
+      // Local Philippine Standard Time (PHT, UTC+8)
+      const phTime = new Date().toLocaleString('en-US', {
+        timeZone: 'Asia/Manila',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      });
+
       try {
         const response = await fetch('https://formsubmit.co/ajax/drewllaneta05@gmail.com', {
           method: 'POST',
@@ -346,10 +357,11 @@ document.addEventListener('DOMContentLoaded', () => {
             'Accept': 'application/json'
           },
           body: JSON.stringify({
-            "Sender Name": nameVal,
-            "Email Address": emailVal,
+            "Name": nameVal,
+            "Email": emailVal,
             "Message": messageVal,
-            _subject: `New Portfolio Message from ${nameVal}`,
+            "Time (PHT)": phTime,
+            _subject: `New Portfolio Message from ${nameVal} [${phTime}]`,
             _template: 'box',
             _captcha: 'false'
           })
