@@ -148,8 +148,118 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ------------------------------------------------------------------------
-  // 5. Copy Email to Clipboard Feature
+  // 4. Dynamic Neon Cursor Spotlight & 3D Interactive Card Tilt
   // ------------------------------------------------------------------------
+  const cursorGlow = document.getElementById('cursor-glow');
+  const cursorDot = document.getElementById('cursor-dot');
+  const isFinePointer = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // A. Ambient Neon Cursor Follower
+  if (isFinePointer && !prefersReducedMotion && cursorGlow && cursorDot) {
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let glowX = mouseX;
+    let glowY = mouseY;
+    let dotX = mouseX;
+    let dotY = mouseY;
+    let isMoving = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!isMoving) {
+        document.body.classList.add('cursor-active');
+        isMoving = true;
+      }
+    }, { passive: true });
+
+    window.addEventListener('mouseleave', () => {
+      document.body.classList.remove('cursor-active');
+      isMoving = false;
+    });
+
+    // Interactive Hover Intensity Detection
+    const interactiveSelectors = 'a, button, .card, .badge-pill, input, textarea, .filter-tab, .social-icon-btn, .floating-tech-badge, .timeline-dot, .copy-btn';
+    const interactiveElements = document.querySelectorAll(interactiveSelectors);
+
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hovering'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hovering'));
+    });
+
+    // Silky Smooth Lerp Follower Loop
+    const renderCursor = () => {
+      // Glow trailing (smooth fluid lag)
+      glowX += (mouseX - glowX) * 0.12;
+      glowY += (mouseY - glowY) * 0.12;
+      cursorGlow.style.left = `${glowX}px`;
+      cursorGlow.style.top = `${glowY}px`;
+
+      // Dot tight tracking (instant responsiveness)
+      dotX += (mouseX - dotX) * 0.45;
+      dotY += (mouseY - dotY) * 0.45;
+      cursorDot.style.left = `${dotX}px`;
+      cursorDot.style.top = `${dotY}px`;
+
+      requestAnimationFrame(renderCursor);
+    };
+    requestAnimationFrame(renderCursor);
+  }
+
+  // B. 3D Card Tilt & Interactive Spotlight Beam Tracker
+  if (isFinePointer && !prefersReducedMotion) {
+    const tiltCards = document.querySelectorAll(
+      '.card, .developer-card-frame, .origin-spotlight-card'
+    );
+
+    tiltCards.forEach(card => {
+      let isHovered = false;
+      let rafId = null;
+
+      card.addEventListener('mouseenter', () => {
+        isHovered = true;
+        card.style.transition = 'transform 0.1s ease-out, box-shadow 0.25s ease, border-color 0.25s ease';
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        if (!isHovered) return;
+
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+        }
+
+        rafId = requestAnimationFrame(() => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          // Set CSS custom variables for dynamic radial beam
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+
+          // Calculate 3D perspective rotation
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -6.5; // Max 6.5deg tilt
+          const rotateY = ((x - centerX) / centerX) * 6.5;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(4px)`;
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        isHovered = false;
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+        }
+        card.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease';
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+        card.style.setProperty('--mouse-x', `-999px`);
+        card.style.setProperty('--mouse-y', `-999px`);
+      });
+    });
+  }
   const copyEmailBtn = document.getElementById('copy-email-btn');
   const displayEmail = document.getElementById('display-email');
 
@@ -236,11 +346,11 @@ document.addEventListener('DOMContentLoaded', () => {
             'Accept': 'application/json'
           },
           body: JSON.stringify({
-            name: nameVal,
-            email: emailVal,
-            message: messageVal,
-            _subject: `New Portfolio Inquiry from ${nameVal}`,
-            _template: 'table',
+            "Sender Name": nameVal,
+            "Email Address": emailVal,
+            "Message": messageVal,
+            _subject: `New Portfolio Message from ${nameVal}`,
+            _template: 'box',
             _captcha: 'false'
           })
         });

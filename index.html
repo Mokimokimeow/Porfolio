@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Portfolio">
   <meta property="og:description" content="Explore my development journey, academic capstone, and programming projects.">
-  <meta property="og:image" content="assets/images/project-mini-donut.svg">
+  <meta property="og:image" content="assets/images/project-mini-donut.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -42,6 +42,10 @@
   </script>
 </head>
 <body class="bg-primary text-primary antialiased selection:bg-accent-purple selection:text-white" oncontextmenu="return false;">
+
+  <!-- Interactive Dynamic Ambient Cursor Spotlight -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
 
   <!-- Background Ambient Glow Accents -->
   <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
@@ -74,7 +78,7 @@
 
       <!-- Action Button & Mobile Toggle -->
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-secondary btn-sm nav-cta">Get in Touch</a>
+        <a href="#contact" class="btn btn-secondary btn-sm nav-cta">Message me!</a>
         <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
@@ -95,7 +99,7 @@
           <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         <div class="mobile-drawer-footer">
-          <a href="#contact" class="btn btn-primary w-full mobile-cta-btn">Let's Connect</a>
+          <a href="#contact" class="btn btn-primary w-full mobile-cta-btn">Message me!</a>
         </div>
       </div>
     </div>
@@ -108,11 +112,6 @@
       <div class="container hero-grid">
         <!-- Left Column: Introduction -->
         <div class="hero-content reveal-on-scroll">
-          <div class="badge-pill mb-4">
-            <span class="badge-dot"></span>
-            <span class="badge-text">3RD YEAR BSIT STUDENT • ASPIRING WEB &amp; MOBILE DEVELOPER</span>
-          </div>
-
           <h1 class="hero-title">
             Hi, I'm <span class="highlight-purple">Andrew Llaneta</span>.<br>
             Building My Way Into <span class="highlight-purple">Web Development.</span>
@@ -155,8 +154,7 @@
           <div class="developer-card-frame">
             <!-- Center Profile Image Area (Blank placeholder - Replace src with your photo) -->
             <div class="profile-avatar-container" id="hero-profile-container">
-              <!-- EDIT HERE: Replace 'assets/images/avatar-blank.svg' with your actual image path (e.g. 'assets/images/profile.jpg') -->
-              <img src="assets/images/avatar-blank.svg" alt="Andrew Llaneta - Profile Photo Placeholder" class="profile-avatar-img" id="hero-profile-img" width="340" height="340">
+              <img src="assets/images/profile.png" alt="Andrew Llaneta - Profile Photo" class="profile-avatar-img" id="hero-profile-img" width="340" height="340" loading="eager">
               <div class="profile-avatar-border"></div>
             </div>
 
@@ -278,7 +276,9 @@
           <!-- Category 1: Web Development -->
           <div class="skill-group-block reveal-on-scroll">
             <div class="skill-group-header">
-              <span class="group-indicator">01</span>
+              <span class="group-indicator" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </span>
               <h3 class="skill-group-title">Web Development</h3>
             </div>
             <div class="skills-cards-grid">
@@ -351,7 +351,9 @@
           <!-- Category 2: Programming -->
           <div class="skill-group-block reveal-on-scroll">
             <div class="skill-group-header">
-              <span class="group-indicator">02</span>
+              <span class="group-indicator" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 9-3 3 3 3"/><path d="m14 15 3-3-3-3"/></svg>
+              </span>
               <h3 class="skill-group-title">Programming</h3>
             </div>
             <div class="skills-cards-grid grid-cols-2">
@@ -378,7 +380,9 @@
             <!-- Tools -->
             <div class="skill-group-block reveal-on-scroll">
               <div class="skill-group-header">
-                <span class="group-indicator">03</span>
+                <span class="group-indicator" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </span>
                 <h3 class="skill-group-title">Tools</h3>
               </div>
               <div class="skills-cards-grid">
@@ -419,7 +423,9 @@
             <!-- Design -->
             <div class="skill-group-block reveal-on-scroll">
               <div class="skill-group-header">
-                <span class="group-indicator">04</span>
+                <span class="group-indicator" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                </span>
                 <h3 class="skill-group-title">Design</h3>
               </div>
               <div class="skills-cards-grid">
@@ -498,8 +504,7 @@
             <div class="featured-project-layout">
               <!-- Left: Project Mockup Preview -->
               <div class="project-media-wrapper">
-                <!-- EDIT HERE: Replace with actual project screenshot if available -->
-                <img src="assets/images/project-mini-donut.svg" alt="R&K's Mini Donut Web-Based Inventory Management System Screenshot" class="project-img" loading="lazy">
+                <img src="assets/images/project-mini-donut.png" alt="R&K's Mini Donut Web-Based Inventory Management System Screenshot" class="project-img" loading="lazy">
                 <div class="project-media-badge">FIRST MAJOR SYSTEM PROJECT</div>
               </div>
 
@@ -553,8 +558,7 @@
                      data-category="web-development systems academic"
                      id="project-02">
               <div class="project-card-image-wrap">
-                <!-- EDIT HERE: Replace with actual screenshot -->
-                <img src="assets/images/project-bulwagang.svg" alt="Bulwagang NCST Web-Based System Screenshot" class="project-card-img" loading="lazy">
+                <img src="assets/images/project-bulwagang.png" alt="Bulwagang NCST Web-Based System Screenshot" class="project-card-img" loading="lazy">
                 <div class="project-badge-overlay">WEB TECHNOLOGY PROJECT</div>
               </div>
               <div class="project-card-body">
@@ -596,8 +600,7 @@
                      data-category="programming academic"
                      id="project-03">
               <div class="project-card-image-wrap">
-                <!-- EDIT HERE: Replace with actual screenshot -->
-                <img src="assets/images/project-cooking-quests.svg" alt="Cooking Quests Python Project Screenshot" class="project-card-img" loading="lazy">
+                <img src="assets/images/project-cooking-quests.png" alt="Cooking Quests Python Project Screenshot" class="project-card-img" loading="lazy">
                 <div class="project-badge-overlay">PYTHON PROJECT</div>
               </div>
               <div class="project-card-body">
@@ -639,8 +642,7 @@
                      data-category="programming academic"
                      id="project-04">
               <div class="project-card-image-wrap">
-                <!-- EDIT HERE: Replace with actual screenshot -->
-                <img src="assets/images/project-minesweeper.svg" alt="Java Minesweeper Project Screenshot" class="project-card-img" loading="lazy">
+                <img src="assets/images/project-minesweeper.png" alt="Java Minesweeper Project Screenshot" class="project-card-img" loading="lazy">
                 <div class="project-badge-overlay">JAVA PROJECT</div>
               </div>
               <div class="project-card-body">
@@ -682,7 +684,7 @@
                      data-category="mobile systems academic"
                      id="project-05">
               <div class="project-card-image-wrap">
-                <img src="assets/images/project-bndc-attendance.svg" alt="BNDC Attendance Checker Mobile App Screenshot" class="project-card-img" loading="lazy">
+                <img src="assets/images/project-bndc-attendance.png" alt="BNDC Attendance Checker Mobile App Screenshot" class="project-card-img" loading="lazy">
                 <div class="project-badge-overlay">MOBILE PROJECT</div>
               </div>
               <div class="project-card-body">
@@ -753,8 +755,7 @@
 
             <div class="origin-visual">
               <div class="origin-frame">
-                <!-- EDIT HERE: Replace with actual origin capstone screenshot or photo -->
-                <img src="assets/images/project-mini-donut.svg" alt="R&K's Mini Donut Inventory Management System Origin" class="origin-preview-img" loading="lazy">
+                <img src="assets/images/project-mini-donut.png" alt="R&K's Mini Donut Inventory Management System Origin" class="origin-preview-img" loading="lazy">
                 <div class="origin-glass-badge">
                   <span class="origin-dot"></span>
                   First System Milestone
@@ -789,13 +790,13 @@
 
           <!-- Milestone 01: R&K's Mini Donut -->
           <div class="timeline-node reveal-on-scroll" data-tech="PHP, MySQL, Web" data-level="Senior High School" data-type="Capstone Project">
-            <div class="timeline-dot">
-              <span class="timeline-dot-inner">01</span>
+            <div class="timeline-dot" title="Senior High School Capstone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
             <div class="timeline-card card">
               <div class="timeline-card-header">
-                <span class="node-number">01</span>
                 <span class="node-stage-badge">SHS Capstone</span>
+                <span class="node-timeframe text-accent-cyan font-mono text-xs">Origin Milestone</span>
               </div>
               <h3 class="timeline-card-title">R&K's Mini Donut Inventory Management System</h3>
               <p class="timeline-card-summary text-secondary">
@@ -827,13 +828,13 @@
 
           <!-- Milestone 02: Bulwagang NCST -->
           <div class="timeline-node reveal-on-scroll delay-100" data-tech="Web Technology" data-level="2nd Year BSIT" data-type="Course Project">
-            <div class="timeline-dot">
-              <span class="timeline-dot-inner">02</span>
+            <div class="timeline-dot" title="Web Technology Project">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
             </div>
             <div class="timeline-card card">
               <div class="timeline-card-header">
-                <span class="node-number">02</span>
                 <span class="node-stage-badge">Web Technology</span>
+                <span class="node-timeframe text-accent-cyan font-mono text-xs">2nd Year BSIT</span>
               </div>
               <h3 class="timeline-card-title">Bulwagang NCST Web-Based System</h3>
               <p class="timeline-card-summary text-secondary">
@@ -858,13 +859,13 @@
 
           <!-- Milestone 03: Cooking Quests (Python) -->
           <div class="timeline-node reveal-on-scroll delay-200" data-tech="Python" data-level="2nd Year BSIT" data-type="Programming Project">
-            <div class="timeline-dot">
-              <span class="timeline-dot-inner">03</span>
+            <div class="timeline-dot" title="Python Programming Project">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
             </div>
             <div class="timeline-card card">
               <div class="timeline-card-header">
-                <span class="node-number">03</span>
                 <span class="node-stage-badge">Python Programming</span>
+                <span class="node-timeframe text-accent-cyan font-mono text-xs">Interactive App</span>
               </div>
               <h3 class="timeline-card-title">Cooking Quests</h3>
               <p class="timeline-card-summary text-secondary">
@@ -889,13 +890,13 @@
 
           <!-- Milestone 04: Java Minesweeper -->
           <div class="timeline-node reveal-on-scroll delay-300" data-tech="Java" data-level="2nd Year BSIT" data-type="Programming Project">
-            <div class="timeline-dot">
-              <span class="timeline-dot-inner">04</span>
+            <div class="timeline-dot" title="Java Game Logic Project">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="12" y2="12"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="15" x2="15.01" y1="13" y2="13"/><line x1="18" x2="18.01" y1="11" y2="11"/><rect width="20" height="12" x="2" y="6" rx="6"/></svg>
             </div>
             <div class="timeline-card card">
               <div class="timeline-card-header">
-                <span class="node-number">04</span>
                 <span class="node-stage-badge">Java Game Logic</span>
+                <span class="node-timeframe text-accent-purple font-mono text-xs">OOP Implementation</span>
               </div>
               <h3 class="timeline-card-title">Java Minesweeper</h3>
               <p class="timeline-card-summary text-secondary">
@@ -920,13 +921,13 @@
 
           <!-- Milestone 05: BNDC Attendance Checker -->
           <div class="timeline-node reveal-on-scroll delay-400" data-tech="React, Vite" data-level="BSIT" data-type="Mobile Attendance System">
-            <div class="timeline-dot">
-              <span class="timeline-dot-inner">05</span>
+            <div class="timeline-dot" title="React & Vite Mobile Attendance">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><line x1="12" x2="12.01" y1="18" y2="18"/></svg>
             </div>
             <div class="timeline-card card">
               <div class="timeline-card-header">
-                <span class="node-number">05</span>
                 <span class="node-stage-badge">React &amp; Vite</span>
+                <span class="node-timeframe text-accent-cyan font-mono text-xs">Mobile Solution</span>
               </div>
               <h3 class="timeline-card-title">BNDC Attendance Checker</h3>
               <p class="timeline-card-summary text-secondary">
@@ -968,44 +969,56 @@
         <div class="process-grid">
           <!-- Step 01 -->
           <div class="process-card card reveal-on-scroll">
-            <div class="process-num">01</div>
+            <div class="process-card-top">
+              <span class="process-step-badge">Phase 01</span>
+            </div>
             <h3 class="process-name">UNDERSTAND</h3>
-            <p class="process-text text-secondary">Understand the problem and requirements.</p>
+            <p class="process-text text-secondary">Analyze the problem, research use cases, and outline clear project requirements.</p>
           </div>
 
           <!-- Step 02 -->
           <div class="process-card card reveal-on-scroll delay-100">
-            <div class="process-num">02</div>
+            <div class="process-card-top">
+              <span class="process-step-badge">Phase 02</span>
+            </div>
             <h3 class="process-name">PLAN</h3>
-            <p class="process-text text-secondary">Plan the features, workflow, and structure.</p>
+            <p class="process-text text-secondary">Architect features, database schema, component hierarchy, and workflows.</p>
           </div>
 
           <!-- Step 03 -->
           <div class="process-card card reveal-on-scroll delay-200">
-            <div class="process-num">03</div>
+            <div class="process-card-top">
+              <span class="process-step-badge">Phase 03</span>
+            </div>
             <h3 class="process-name">DESIGN</h3>
-            <p class="process-text text-secondary">Create the interface and user experience.</p>
+            <p class="process-text text-secondary">Craft intuitive user interfaces, responsive layouts, and cohesive visual hierarchy.</p>
           </div>
 
           <!-- Step 04 -->
           <div class="process-card card reveal-on-scroll delay-300">
-            <div class="process-num">04</div>
+            <div class="process-card-top">
+              <span class="process-step-badge">Phase 04</span>
+            </div>
             <h3 class="process-name">DEVELOP</h3>
-            <p class="process-text text-secondary">Build the actual system or application.</p>
+            <p class="process-text text-secondary">Write clean, structured frontend components and functional backend logic.</p>
           </div>
 
           <!-- Step 05 -->
           <div class="process-card card reveal-on-scroll delay-400">
-            <div class="process-num">05</div>
+            <div class="process-card-top">
+              <span class="process-step-badge">Phase 05</span>
+            </div>
             <h3 class="process-name">TEST</h3>
-            <p class="process-text text-secondary">Check functionality and responsiveness.</p>
+            <p class="process-text text-secondary">Validate cross-device responsiveness, edge cases, interactions, and data flows.</p>
           </div>
 
           <!-- Step 06 -->
           <div class="process-card card reveal-on-scroll delay-500">
-            <div class="process-num">06</div>
+            <div class="process-card-top">
+              <span class="process-step-badge">Phase 06</span>
+            </div>
             <h3 class="process-name">IMPROVE</h3>
-            <p class="process-text text-secondary">Refine the project based on testing and feedback.</p>
+            <p class="process-text text-secondary">Iterate based on hands-on testing, code quality reviews, and user feedback.</p>
           </div>
         </div>
       </div>
@@ -1125,7 +1138,7 @@
               <!-- FormSubmit Configuration -->
               <input type="hidden" name="_subject" value="New Message from Portfolio Website">
               <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_template" value="box">
 
               <div class="form-group">
                 <label for="contact-name" class="form-label">Your Name <span class="required-star">*</span></label>
