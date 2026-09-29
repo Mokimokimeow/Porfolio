@@ -350,22 +350,48 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       try {
-        const response = await fetch('https://formsubmit.co/ajax/drewllaneta05@gmail.com', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            "Name": nameVal,
-            "Email": emailVal,
-            "Message": messageVal,
-            "Time (PHT)": phTime,
-            _subject: `New Portfolio Message from ${nameVal} [${phTime}]`,
-            _template: 'box',
-            _captcha: 'false'
-          })
-        });
+        const accessKeyInput = document.getElementById('web3forms-access-key');
+        const accessKey = accessKeyInput ? accessKeyInput.value.trim() : '';
+
+        let response;
+        if (accessKey && accessKey !== 'YOUR_ACCESS_KEY_HERE') {
+          // Modern Web3Forms Submission (Clean Cards, Dark Mode, Zero Ads)
+          response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: accessKey,
+              name: nameVal,
+              email: emailVal,
+              message: messageVal,
+              from_name: `${nameVal} (Portfolio Contact)`,
+              subject: `New Portfolio Message from ${nameVal} [${phTime}]`,
+              replyto: emailVal,
+              "Sent at (PH Time)": phTime
+            })
+          });
+        } else {
+          // FormSubmit Direct Mode
+          response = await fetch('https://formsubmit.co/ajax/drewllaneta05@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              "Name": nameVal,
+              "Email": emailVal,
+              "Message": messageVal,
+              "Time (PHT)": phTime,
+              _subject: `New Portfolio Message from ${nameVal} [${phTime}]`,
+              _template: 'box',
+              _captcha: 'false'
+            })
+          });
+        }
 
         const data = await response.json();
         
