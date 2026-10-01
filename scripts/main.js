@@ -351,60 +351,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         const accessKeyInput = document.getElementById('web3forms-access-key');
-        const accessKey = accessKeyInput ? accessKeyInput.value.trim() : '';
+        const accessKey = accessKeyInput ? accessKeyInput.value.trim() : '115f8fcf-f729-4609-8de7-a810f67efa74';
+        const botcheckInput = document.getElementById('botcheck');
+        const isBot = botcheckInput && botcheckInput.checked;
 
-        let response;
-        if (accessKey && accessKey !== 'YOUR_ACCESS_KEY_HERE') {
-          // Modern Web3Forms Submission (Clean Cards, Dark Mode, Zero Ads)
-          response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-              access_key: accessKey,
-              name: nameVal,
-              email: emailVal,
-              message: messageVal,
-              from_name: `${nameVal} (Portfolio Contact)`,
-              subject: `New Portfolio Message from ${nameVal} [${phTime}]`,
-              replyto: emailVal,
-              "Sent at (PH Time)": phTime
-            })
-          });
-        } else {
-          // FormSubmit Direct Mode
-          response = await fetch('https://formsubmit.co/ajax/drewllaneta05@gmail.com', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-              "Name": nameVal,
-              "Email": emailVal,
-              "Message": messageVal,
-              "Time (PHT)": phTime,
-              _subject: `New Portfolio Message from ${nameVal} [${phTime}]`,
-              _template: 'box',
-              _captcha: 'false'
-            })
-          });
+        if (isBot) {
+          // Silent bot trap
+          showToast('Thank you! Your message has been received.', 'success');
+          contactForm.reset();
+          return;
         }
+
+        // Web3Forms direct JSON submission
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: accessKey,
+            name: nameVal,
+            email: emailVal,
+            message: messageVal,
+            from_name: `${nameVal} (Portfolio Website)`,
+            subject: `Portfolio Inquiry from ${nameVal} [${phTime}]`,
+            replyto: emailVal,
+            "Sent at (PH Time)": phTime
+          })
+        });
 
         const data = await response.json();
         
-        if (response.ok && (data.success === 'true' || data.success === true || data.message)) {
+        if (response.ok && (data.success === true || data.success === 'true')) {
           showToast('Thank you! Your message has been sent to Andrew.', 'success');
           contactForm.reset();
         } else {
           throw new Error(data.message || 'Submission failed');
         }
       } catch (err) {
-        console.warn('Direct form submission error, triggering mailto fallback:', err);
-        showToast('Sending message via email client...', 'info');
-        const mailtoUrl = `mailto:drewllaneta05@gmail.com?subject=${encodeURIComponent('Portfolio Message from ' + nameVal)}&body=${encodeURIComponent(messageVal + '\n\nSender: ' + nameVal + ' (' + emailVal + ')')}`;
+        console.warn('Web3Forms direct submission error, triggering mailto fallback:', err);
+        showToast('Direct delivery unavailable. Opening mail client...', 'info');
+        const mailtoUrl = `mailto:drewllaneta05@gmail.com?subject=${encodeURIComponent('Portfolio Inquiry from ' + nameVal)}&body=${encodeURIComponent(messageVal + '\n\nSender: ' + nameVal + ' (' + emailVal + ')')}`;
         window.location.href = mailtoUrl;
       } finally {
         if (submitBtn) {
